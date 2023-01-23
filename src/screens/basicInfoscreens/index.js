@@ -436,17 +436,20 @@ const BasicInfoScreen = ({navigation, route}) => {
               }}>
               <View style={styles.ro}>
                 <Text style={styles.lstyle}>English</Text>
-                <RadioButton
-                  onPress={() => {
-                    setCheckedEnglish(!CheckedEnglish);
-                    setLanguage('English');
-                    setCheckedSpanish(false);
-                    setCheckedLanguageOther(false);
-                  }}
-                  status={CheckedEnglish ? 'checked' : 'unchecked'}
-                  color={'#be1d2d'}
-                  uncheckColor={colors.secondary}
-                />
+
+                <View style={{backgroundColor: colors.lightGray}}>
+                  <RadioButton
+                    onPress={() => {
+                      setCheckedEnglish(!CheckedEnglish);
+                      setLanguage('English');
+                      setCheckedSpanish(false);
+                      setCheckedLanguageOther(false);
+                    }}
+                    status={CheckedEnglish ? 'checked' : 'unchecked'}
+                    color={'#be1d2d'}
+                    uncheckColor={colors.secondary}
+                  />
+                </View>
               </View>
             </TouchableOpacity>
             <TouchableOpacity
@@ -458,17 +461,19 @@ const BasicInfoScreen = ({navigation, route}) => {
               }}>
               <View style={styles.ro}>
                 <Text style={styles.lstyle}>Spanish</Text>
-                <RadioButton
-                  onPress={() => {
-                    setCheckedSpanish(!CheckedSpanish);
-                    setLanguage('Spanish');
-                    setCheckedEnglish(false);
-                    setCheckedLanguageOther(false);
-                  }}
-                  status={CheckedSpanish ? 'checked' : 'unchecked'}
-                  color={'#be1d2d'}
-                  uncheckColor={colors.secondary}
-                />
+                <View style={{backgroundColor: colors.lightGray}}>
+                  <RadioButton
+                    onPress={() => {
+                      setCheckedSpanish(!CheckedSpanish);
+                      setLanguage('Spanish');
+                      setCheckedEnglish(false);
+                      setCheckedLanguageOther(false);
+                    }}
+                    status={CheckedSpanish ? 'checked' : 'unchecked'}
+                    color={'#be1d2d'}
+                    uncheckColor={colors.secondary}
+                  />
+                </View>
               </View>
             </TouchableOpacity>
             {/* <TouchableOpacity
